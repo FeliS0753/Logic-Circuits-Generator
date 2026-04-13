@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Logic Circuits Generator</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+    <link rel="stylesheet" href="/css/set.css">
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Logic Circuits Generator</h1>
+    </header>
+    <div class="main-wrapper">
+      <main>
+        <h3>演算子</h3>
+        <hr>
+        <table>
+          <thead>
+            <tr>
+              <th>優先度</th>
+              <th>記号</th>
+              <th>演算の種類</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>+</td>
+              <td>OR演算</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>*</td>
+              <td>AND演算</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>^</td>
+              <td>XOR演算</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>( )</td>
+              <td>( )内の演算を優先する</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>!</td>
+              <td>NOT演算</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="attention">*隣り合う演算子が同じ、または優先度が同じ場合は左側から優先されます。</p>
+        <p class="attention">*NOT演算は前後の、論理変数または( )内の最初の演算にかかります。</p>
+        <p class="attention">*出力された回路図の配線が見づらい場合がございます。</p>
+
+        <h3>入力</h3>
+        <form action="/send" method="POST">
+          <input type="text" name="str" placeholder="式を入力する">
+          <button type="submit">実行</button>
+          <button type="reset">クリア</button>
+        </form>
+        <p class="warn hide" id="warn1">( )の付け方が不正です。</p>
+        <p class="warn hide" id="warn2">(論理変数=)の形で始めてください。</p>
+        <div class="Attention">注意事項</div>
+          <p class="attention">*論理変数は英字1文字でキーボードから入力してください。(大文字と小文字は区別される。)</p>
+          <p class="attention">*(出力を表す論理変数=)の形で始めてください。</p>
+        <script src="/js/lib.js"></script>
+        <canvas id="drawer"></canvas>
+        <button type="button" onclick="download()">PNGでダウンロード</button>
+        <script src="/js/draw.js"></script>
+      </main>
+    </div>
+    <footer>
+      <p>Logic Circuits Generator</p>
+    </footer>
+  </body>
+</html>
