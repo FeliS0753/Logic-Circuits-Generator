@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import './canvas.css';
 import { draw } from '/src/programs/draw.js';
-import 'katex/dist/katex.min.css';
 import Attentions from './attentions/attentions.jsx';
 import Math_field from './mathfield/mathfield.jsx';
 import How_to_use from './how-to-use/how-to-use.jsx';
