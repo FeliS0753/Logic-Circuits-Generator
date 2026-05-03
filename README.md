@@ -1,6 +1,8 @@
 # Logic-Circuits-Generator
 論理式から論理回路図を生成をするWebアプリケーションです。
 
+[デモはこちら(KaTeXがうまく表示されない場合がございます)]()
+
 ## 目次
 <details>
   <summary>クリックで開く</summary>
