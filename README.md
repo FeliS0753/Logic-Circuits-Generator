@@ -1,10 +1,22 @@
 # Logic-Circuits-Generator
-論理式から論理回路図を生成をするWebアプリケーション
+論理式から論理回路図を生成をするWebアプリケーションです。
 
-##　サイトイメージ
+## サイトイメージ
 
-トップページ
-<img width="384" height="240" alt="スクリーンショット 2026-05-03 113446" src="https://github.com/user-attachments/assets/d90b9534-cee3-44c4-9621-de42e2cbf9e8" />
+### メイン画面
+<img width="512" height="320" alt="スクリーンショット 2026-05-03 113446" src="https://github.com/user-attachments/assets/d90b9534-cee3-44c4-9621-de42e2cbf9e8" />
+
+**この画面で論理式の入力と回路図の生成を行います。**
+
+### 使い方
+<img width="371.4" height="328.8" alt="スクリーンショット 2026-05-03 115639" src="https://github.com/user-attachments/assets/05bcb1cf-8b47-40f4-87b1-c824d7bd0525" />
+
+**このアプリケーションの使い方を簡潔に説明しています。**
+
+### サンプル
+<img width="369.9" height="305.4" alt="スクリーンショット 2026-05-03 120033" src="https://github.com/user-attachments/assets/1e1964fe-ef27-4d73-8b57-3038430e035e" />
+
+**出力例のサンプルをいくつか載せています.**
 
 
 ## 🚀 主な機能
