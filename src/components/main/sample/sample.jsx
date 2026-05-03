@@ -19,19 +19,19 @@ export default function Sample(){
                 </div>
                 <div className='picture'>
                     <div className='pic-title'>
-                        <InlineMath math="Z=\overline{\overline{A\cdot A}\cdot \overline{B\cdot B}}"/>
+                        <InlineMath math={"Z=\\overline{\\overline{A\\cdot A}\\cdot \\overline{B\\cdot B}}"}/>
                     </div>
                     <img src={sample1} alt="出力例2" />
                 </div>
                 <div className='picture'>
                     <div className='pic-title'>
-                        <InlineMath math="Z=\overline{\overline{A}+\overline{B}\cdot C}+\overline{B}\oplus(A+C)"/>
+                        <InlineMath math={"Z=\\overline{\\overline{A}+\\overline{B}\\cdot C}+\\overline{B}\\oplus(A+C)"}/>
                     </div>
                     <img src={sample2} alt="出力例3" />
                 </div>
                 <div className='picture'>
                     <div className='pic-title'>
-                        <InlineMath math="Z=A+B\cdot C+\overline{A\cdot B + D}\cdot E"/>
+                        <InlineMath math={"Z=A+B\\cdot C+\\overline{A\\cdot B + D}\\cdot E"}/>
                     </div>
                     <img src={sample3} alt="出力例4" />
                 </div>
