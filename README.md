@@ -2,8 +2,9 @@
 論理式から論理回路図を生成をするWebアプリケーション
 
 ##　サイトイメージ
+
 トップページ
-<img width="1920" height="1200" alt="スクリーンショット 2026-05-03 113446" src="https://github.com/user-attachments/assets/d90b9534-cee3-44c4-9621-de42e2cbf9e8" />
+<img width="384" height="240" alt="スクリーンショット 2026-05-03 113446" src="https://github.com/user-attachments/assets/d90b9534-cee3-44c4-9621-de42e2cbf9e8" />
 
 
 ## 🚀 主な機能
