@@ -1,0 +1,24 @@
+.tool-footer {
+  /* ページの下部に配置 */
+  margin-top: 80px;
+  padding: 20px 40px;
+  border-top: 1px solid #f1f5f9; /* 薄い境界線 */
+  
+  /* 左右振り分け */
+  display: flex;
+  justify-content: space-between;
+  
+  /* 文字のデザイン */
+  color: #94a3b8; /* 薄いグレー */
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, monospace; /* バージョン等は等幅が合う */
+}
+
+.footer-right span {
+  margin-left: 10px;
+}
+
+/* 縦線の区切り */
+.separator {
+  color: #e2e8f0;
+}

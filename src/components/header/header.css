@@ -1,0 +1,60 @@
+header {
+  /* 固定のための設定 */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* 他の要素より上に表示されるようにする */
+  
+  /* レイアウトの設定 */
+  display: flex;
+  justify-content: space-between; /* これで左右の両端に分かれる */
+  align-items: center;
+  
+  /* デザイン（白基調・シンプル） */
+  height: 60px;
+  padding: 0 5%; /* 左右に少し余裕を持たせる */
+  background-color: rgba(250, 255, 255, 0.8); /* 少し透かすとオシャレ */
+  backdrop-filter: blur(10px); /* 背後をぼかす（グラスモーフィズム） */
+  border-bottom: 1px solid #f0f0f0; /* 境界線 */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 12px;
+}
+
+.logo-container img {
+    /* ここでロゴの「見た目の大きさ」を決めます */
+    height: 50px;          /* 好きな高さに調整してください */
+    width: auto;           /* 横幅は自動計算（比率維持） */
+    
+    /* 写真を枠内に綺麗に収める設定 */
+    object-fit: contain;   
+    
+    /* 任意：ロゴを少し丸くしたり影をつけたりする場合 */
+    border-radius: 4px;
+}
+
+.logo-container:hover {
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.title {
+    margin: 0;
+    line-height: 1;
+    font-weight: 500; 
+}
+
+nav a {
+  margin: auto 12px;
+  text-decoration: none;
+  color: #666;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #222;
+}

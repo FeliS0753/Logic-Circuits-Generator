@@ -1,0 +1,40 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 825px;
+  color: #444;
+}
+
+/* 外枠のセクション */
+section {
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border: 1px solid #e1e4e8;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  color: #333;
+  line-height: 1.8;
+}
+
+/* 見出し：シンプルに下線だけ */
+section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #eee; /* アクセントカラー */
+  color: #1a202c;
+}
+
+/* LaTeXコマンドの部分（等幅フォントにする） */
+.latex-command {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  background-color: #f1f5f9;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #555; /* 少し色を変えるとコードっぽさが出ます */
+}

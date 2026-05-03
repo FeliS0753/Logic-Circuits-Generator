@@ -1,0 +1,33 @@
+.attention-card {
+  margin: 1rem 0 1.5rem 0;
+  padding: 1.5rem;
+  background-color: #fafafa; /* 真っ白よりごくわずかにグレーにすると「補足情報」感が出る */
+  border-radius: 8px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+}
+
+.attention-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #555; /* 真っ黒より少し薄く */
+  font-weight: bold;
+}
+
+.attention-list {
+  margin: 0;
+  padding-left: 1.2rem; /* リストのポチ分の余白 */
+  list-style-type: disc; /* 標準の「点」にする */
+  color: #666;
+  font-size: 0.85rem;
+  line-height: 1.6; /* 行間を広げて読みやすく */
+}
+
+.attention-list li {
+  margin-bottom: 0.5rem; /* 項目ごとの隙間 */
+}
+
+.attention-list li:last-child {
+  margin-bottom: 0;
+}

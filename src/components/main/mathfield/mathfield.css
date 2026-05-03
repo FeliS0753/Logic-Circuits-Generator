@@ -1,0 +1,33 @@
+.mf-container {
+    position: relative;
+    display: inline-block;
+}
+
+math-field {
+    width: 700px;
+    height: 50px;
+    margin: 0 0 4.5rem 65px;
+    border-radius: 10px;
+    font-size: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding-top: 3px;
+    box-sizing: border-box;
+}
+
+math-field::part(menu-toggle) {
+  display: none;
+}
+
+math-field::part(placeholder) {
+  margin-top: 0px;
+  font-size: 20px;
+}
+
+.mf-container p {
+    position: absolute;
+    color: red;
+    font-size: 12px;
+    top: 48px;
+    left: 65px; 
+    z-index: 1000;
+}

@@ -1,0 +1,33 @@
+.pictures {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2列にする */
+  gap: 16px;                            /* 画像同士の隙間 */
+  width: 100%;                          /* mainの幅に合わせる */
+  margin-top: 20px;
+}
+
+.picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  background: #fcfcfc; /* 背景が透過している場合、薄い色を敷くと綺麗 */
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.pictures img {
+  width: 100%;        /* 親要素(Gridの枠)いっぱいに広げる */
+  height: auto;       /* 比率を維持 */
+  aspect-ratio: 16 / 9; /* すべて同じ比率で切り抜く（必要であれば） */
+  object-fit: contain;  /* 画像全体が枠に収まるようにする */
+}
+
+.pic-title {
+  font-size: 0.8rem;
+  color: #334155;
+  /* 数式が長い場合に備えて */
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #f1f5f9; /* さりげない区切り線 */
+}
