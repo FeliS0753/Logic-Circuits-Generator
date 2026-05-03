@@ -1,6 +1,20 @@
 # Logic-Circuits-Generator
 論理式から論理回路図を生成をするWebアプリケーションです。
 
+## 目次
+<details>
+  <summary>クリックで開く</summary>
+  
+- [使用例](#使用例)
+- [サイトイメージ](#サイトイメージ)
+- [主な機能](#主な機能)
+- [開発背景](#開発背景)
+- [使用技術](#使用技術)
+- [こだわった点](#こだわった点)
+- [今後の展望](#今後の展望)
+- [環境構築手順](#環境構築手順)
+</details>
+
 
 ## 使用例
 
@@ -77,7 +91,7 @@
 git clone https://github.com/FeliS0753/Logic-Circuits-Generator
 
 # ディレクトリに移動
-cd repository
+cd Logic-Circuits-Generator
 
 # パッケージのインストール
 npm install
