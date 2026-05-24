@@ -2,7 +2,7 @@ import "./attentions.css";
 import { InlineMath } from 'react-katex';
 
 export default function Attentions(){
-    const str = "\\LaTeX";
+    const str = String.raw`\LaTeX`;
     return (
         <div className="attention-card">
             <h3 className="attention-title">注意事項</h3>
