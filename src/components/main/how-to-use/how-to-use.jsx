@@ -2,7 +2,7 @@ import { InlineMath } from "react-katex";
 import "./how-to-use.css";
 
 export default function How_to_use(){
-    const str = ["\\LaTeX", "\\oplus", "\\overline{\\Box}"];
+    const str = ["\\LaTeX", "\\oplus", "\\overline{\\Box}", "\\cdot"];
     return (
         <section id="how-to-use">
             <h3>使い方</h3>
@@ -39,7 +39,7 @@ export default function How_to_use(){
                     </tr>
                     <tr>
                         <td>AND</td>
-                        <td><InlineMath math={"\\cdot"} /></td>
+                        <td><InlineMath math={str[3]} /></td>
                         <td><kbd>Shift</kbd> + <kbd>:</kbd></td>
                         <td><code className="latex-command">\cdot</code></td>
                         <td className="priority-cell">2</td>

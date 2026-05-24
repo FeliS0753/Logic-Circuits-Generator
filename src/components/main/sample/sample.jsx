@@ -6,6 +6,11 @@ import sample2 from '/src/assets/sample2.png';
 import sample3 from '/src/assets/sample3.png';
 
 export default function Sample(){
+    const str = [
+        "Z=\\overline{\\overline{A\\cdot A}\\cdot \\overline{B\\cdot B}}",
+        "Z=\\overline{\\overline{A}+\\overline{B}\\cdot C}+\\overline{B}\\oplus(A+C)",
+        "Z=A+B\\cdot C+\\overline{A\\cdot B + D}\\cdot E"
+    ]
     return (
         <section id="sample">
             <h3>サンプル</h3>
@@ -19,19 +24,19 @@ export default function Sample(){
                 </div>
                 <div className='picture'>
                     <div className='pic-title'>
-                        <InlineMath math={"Z=\\overline{\\overline{A\\cdot A}\\cdot \\overline{B\\cdot B}}"}/>
+                        <InlineMath math={str[0]}/>
                     </div>
                     <img src={sample1} alt="出力例2" />
                 </div>
                 <div className='picture'>
                     <div className='pic-title'>
-                        <InlineMath math={"Z=\\overline{\\overline{A}+\\overline{B}\\cdot C}+\\overline{B}\\oplus(A+C)"}/>
+                        <InlineMath math={str[1]}/>
                     </div>
                     <img src={sample2} alt="出力例3" />
                 </div>
                 <div className='picture'>
                     <div className='pic-title'>
-                        <InlineMath math={"Z=A+B\\cdot C+\\overline{A\\cdot B + D}\\cdot E"}/>
+                        <InlineMath math={str[2]}/>
                     </div>
                     <img src={sample3} alt="出力例4" />
                 </div>
