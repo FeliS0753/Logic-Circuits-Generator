@@ -39,7 +39,7 @@ export default function How_to_use(){
                     </tr>
                     <tr>
                         <td>AND</td>
-                        <td><InlineMath math="\cdot" /></td>
+                        <td><InlineMath math={"\\cdot"} /></td>
                         <td><kbd>Shift</kbd> + <kbd>:</kbd></td>
                         <td><code className="latex-command">\cdot</code></td>
                         <td className="priority-cell">2</td>
