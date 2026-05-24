@@ -1,16 +1,107 @@
-# React + Vite
+# Logic-Circuits-Generator
+論理式から論理回路図を生成をするWebアプリケーションです。
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[デモはこちら(KaTeXがうまく表示されない場合がございます)](https://logic-circuits-generator.vercel.app/)
 
-Currently, two official plugins are available:
+## 目次
+<details>
+  <summary>クリックで開く</summary>
+  
+- [使用例](#使用例)
+- [サイトイメージ](#サイトイメージ)
+- [主な機能](#主な機能)
+- [開発背景](#開発背景)
+- [使用技術](#使用技術)
+- [こだわった点](#こだわった点)
+- [今後の展望](#今後の展望)
+- [環境構築手順](#環境構築手順)
+</details>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## 使用例
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**画面上のキーボードを使用する様子です。**
 
-## Expanding the ESLint configuration
+<img width="760.8" height="399.2" alt="demo2" src="https://github.com/user-attachments/assets/e35c2cba-6d3d-41e0-ba3d-1e82fa0f6693" />
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+**キーボードから入力を行い、回路図をダウンロードする様子です。**
+
+<img width="716" height="320.8" alt="demo1" src="https://github.com/user-attachments/assets/58253ee5-7fe7-42fa-b95e-8621dee93398" />
+
+
+## サイトイメージ
+
+### メイン画面
+<img width="614.4" height="384" alt="スクリーンショット 2026-05-03 113446" src="https://github.com/user-attachments/assets/d90b9534-cee3-44c4-9621-de42e2cbf9e8" />
+
+**この画面で論理式の入力と回路図の生成を行います。**
+
+### 使い方
+<img width="445.7" height="394.6" alt="スクリーンショット 2026-05-03 115639" src="https://github.com/user-attachments/assets/05bcb1cf-8b47-40f4-87b1-c824d7bd0525" />
+
+**このアプリケーションの使い方を簡潔に説明しています。**
+
+### サンプル
+<img width="443.9" height="366.5" alt="スクリーンショット 2026-05-03 120033" src="https://github.com/user-attachments/assets/1e1964fe-ef27-4d73-8b57-3038430e035e" />
+
+**出力例のサンプルをいくつか載せています.**
+
+
+## 主な機能
+- **1.** 画面上での入力、キーボードからの入力の両方ができ、ユーザーに使いやすさを提供します。
+- **2.** 不正な入力に対しエラーを即座に表示し、ユーザーの入力をサポートします。
+- **3.** 生成した回路図をPNG画像としてダウンロードできます。
+
+## 開発背景
+
+- **背景**：学校でレポートを作る際、論理回路図を載せる機会が何度かあった。そのたびに描画ソフトで回路を<br>
+  作る作業があり、レポート作成にかかる時間が他のレポートよりも長くなってしまっていた。
+- **目的**：論理式を入力するだけで論理回路を生成し、画像として保存でき、レポート作成をスムーズにするツールの開発。
+
+## 使用技術
+### Frontend
+- React: リアルタイムのUI更新を実現できるため採用
+- JavaScript: 構文解析、回路の描画・配置処理の実装
+
+### Library / API
+- Mathlive / KaTeX: 数式入力の効率化、視認性の向上のため採用
+- Canvas API: 自由度が高く、高速な描画が可能なため採用 
+
+## こだわった点
+### 1. [技術的な工夫]
+ユーザーにリアルタイムでサービスを提供できるように、クライアントサイドに処理を集約させ高速化を行いました。
+また、論理式の構造を崩さず正確に構文解析を行うため、入力された文字列をShunting-yard法を論理式用に改良したアルゴリズムで逆ポーランド記法に加工しました。
+これによりスタックを利用しデータを取り出すことで、回路素子単位での管理が可能になりました。
+
+### 2. [ユーザー視点の工夫]
+入力した論理式の視認性を高めるため、Mathliveを利用しLaTeX形式で入力を表示しました。
+また、Mathliveのキーボード入力補完機能や、画面上の仮想キーボードの機能を有効活用し、
+記号を多用するキーボード入力に慣れている人も、慣れていない人も直感的に操作できるインターフェースを実現しました。
+
+## 今後の展望
+- [ ] 複数出力がある論理回路にも対応できる処理の実装
+- [ ] 論理変数や接点の有無など、回路に対するオプションの追加
+- [ ] 回路の描画処理、配置処理の効率化
+
+## 環境構築手順
+ローカル環境で動作させる場合は、以下の手順に従ってください。
+
+```bash
+# リポジトリをクローン
+git clone https://github.com/FeliS0753/Logic-Circuits-Generator
+
+# ディレクトリに移動
+cd Logic-Circuits-Generator
+
+# パッケージのインストール
+npm install
+
+# 環境変数の設定
+cp .env.example .env
+# ※ .envの中身を適宜修正してください
+
+# 起動
+npm run dev
+```
