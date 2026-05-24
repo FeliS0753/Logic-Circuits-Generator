@@ -36,7 +36,7 @@ export function toRpn(str) {
 			st.push(str[i++]);
 		} else if (cn < sn) {
 			if(sn === 10) countAlpha++;
-			else countMark++;
+			else if(sn !== 8) countMark++;
 			rpn += st.pop();
 		} else {
 			if(cn === 10) countAlpha++;

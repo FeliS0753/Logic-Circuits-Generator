@@ -2,6 +2,7 @@ import "./attentions.css";
 import { InlineMath } from 'react-katex';
 
 export default function Attentions(){
+    const str = "\\LaTeX";
     return (
         <div className="attention-card">
             <h3 className="attention-title">注意事項</h3>
@@ -12,7 +13,7 @@ export default function Attentions(){
                 <li><code className="latex-command">\cdot</code>,
                     <code className="latex-command">\oplus</code>の後に論理変数を入れる場合は空白を入れてください。
                 </li>
-                <li>外部から<InlineMath math={"\u005cLaTeX"}/>の数式入力をペーストする際には()に
+                <li>外部から<InlineMath math={str}/>の数式入力をペーストする際には()に
                     <code className="latex-command">\left</code>,
                     <code className="latex-command">\right</code>をつけないでください。
                 </li>
