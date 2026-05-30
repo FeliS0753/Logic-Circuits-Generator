@@ -10,7 +10,7 @@ canvas {
   display: inline-block;  
 }
 
-.canvas-container button {
+button {
   background-color: #ffffff;
   color: #475569; /* 落ち着いたグレー */
   border: 1px solid #e2e8f0;
@@ -21,21 +21,29 @@ canvas {
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
 
+.download-button {
   position: absolute;
   top: -50px;
   right: 0px;
 }
 
+.generate-button {
+  position: absolute;
+  top: 7px;
+  right: -70px;
+}
+
 /* ホバー時に少しだけ青みを入れる */
-.canvas-container button:hover {
+button:hover {
   background-color: #f8fafc;
   border-color: #cbd5e1;
   color: #1e293b;
 }
 
 /* クリックした時に沈む演出 */
-.canvas-container button:active {
+button:active {
   transform: translateY(1px);
   box-shadow: none;
 }

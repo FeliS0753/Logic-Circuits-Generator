@@ -80,30 +80,28 @@ export default function Math_field({ setObject }){
         ];
     }, []);
 
-    const handleKeyUp = (e) =>{
-        if(e.key === "Enter"){
-            const mf = mfref.current;
-            if(!mf) return;
-            mf.executeCommand("hideVirtualKeyboard");
+    const handleKeyUp = () =>{
+        const mf = mfref.current;
+        if(!mf) return;
+        mf.executeCommand("hideVirtualKeyboard");
 
-            let str = toRpn(TeXtostr(mf.value)), data = {};
-            if(Number.isNaN(str - 0)) data = locate(str);
-            else {
-                switch(str){
-                    case 1: setErrors(1); break;
-                    case 2: setErrors(2); break;
-                    case 3:
-                    case 4: setErrors(3); break;
-                    case 5: setErrors(4); break;
-                    case 6: setErrors(5); break;
-                    case 7: setErrors(6); break;
-                    default:;
-                }
-                return;
+        let str = toRpn(TeXtostr(mf.value)), data = {};
+        if(Number.isNaN(str - 0)) data = locate(str);
+        else {
+            switch(str){
+                case 1: setErrors(1); break;
+                case 2: setErrors(2); break;
+                case 3:
+                case 4: setErrors(3); break;
+                case 5: setErrors(4); break;
+                case 6: setErrors(5); break;
+                case 7: setErrors(6); break;
+                default:;
             }
-            setErrors(0);
-            setObject(data);
+            return;
         }
+        setErrors(0);
+        setObject(data);
     };
 
     return (
@@ -111,8 +109,11 @@ export default function Math_field({ setObject }){
             <math-field 
                 ref={mfref}
                 placeholder="式を入力する"
-                onKeyUp={handleKeyUp}
+                onKeyUp={(e) =>{
+                    if(e.key === "Enter") handleKeyUp();
+                }}
             />
+            <button type="button" onClick={handleKeyUp} className='generate-button'>生成</button>
 
             {errors === 1 && <p>( )の付け方が不正です。</p>}
             {errors === 2 && <p>(論理変数=)の形で始めてください。</p>}
