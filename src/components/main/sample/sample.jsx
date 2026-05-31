@@ -7,9 +7,9 @@ import sample3 from '/src/assets/sample3.png';
 
 export default function Sample(){
     const str = [
-        "Z=\\overline{\\overline{A\\cdot A}\\cdot \\overline{B\\cdot B}}",
-        "Z=\\overline{\\overline{A}+\\overline{B}\\cdot C}+\\overline{B}\\oplus(A+C)",
-        "Z=A+B\\cdot C+\\overline{A\\cdot B + D}\\cdot E"
+        "Z = \\overline{\\overline{A\\cdot A}\\cdot \\overline{B\\cdot B}}",
+        "Z = \\overline{\\overline{A}+\\overline{B}\\cdot C}+\\overline{B}\\oplus(A+C)",
+        "Z = A + B \\cdot C + \\overline{A \\cdot B + D} \\cdot E"
     ]
     return (
         <section id="sample">
