@@ -1,7 +1,9 @@
 # Logic-Circuits-Generator
 論理式から論理回路図を生成をするWebアプリケーションです。
 
-[デモはこちら(KaTeXがうまく表示されない場合がございます)](https://logic-circuits-generator.vercel.app/)
+モバイルアクセスはサポートしておりません。
+
+[デモはこちら](https://logic-circuits-generator.vercel.app/)
 
 ## 目次
 <details>
@@ -10,9 +12,7 @@
 - [使用例](#使用例)
 - [サイトイメージ](#サイトイメージ)
 - [主な機能](#主な機能)
-- [開発背景](#開発背景)
 - [使用技術](#使用技術)
-- [こだわった点](#こだわった点)
 - [今後の展望](#今後の展望)
 - [環境構築手順](#環境構築手順)
 </details>
@@ -20,26 +20,29 @@
 
 ## 使用例
 
-**画面上のキーボードを使用する様子です。**
+**画面上の操作で回路図を生成する様子です。**
 
-<img width="760.8" height="399.2" alt="demo2" src="https://github.com/user-attachments/assets/e35c2cba-6d3d-41e0-ba3d-1e82fa0f6693" />
+<img width="760.8" height="399.2" alt="demo1" src="https://github.com/user-attachments/assets/e1f13144-a4d8-4947-be22-dc88617bdf7c" />
+
 
 ---
 
-**キーボードから入力を行い、回路図をダウンロードする様子です。**
+**キーボード上の操作で回路図を生成し、ダウンロードする様子です。**
 
-<img width="716" height="320.8" alt="demo1" src="https://github.com/user-attachments/assets/58253ee5-7fe7-42fa-b95e-8621dee93398" />
+<img width="768" height="311.2" alt="demo2" src="https://github.com/user-attachments/assets/368652b7-4514-4bc3-94d4-9e5c8c7c127c" />
+
 
 
 ## サイトイメージ
 
 ### メイン画面
-<img width="614.4" height="384" alt="スクリーンショット 2026-05-03 113446" src="https://github.com/user-attachments/assets/d90b9534-cee3-44c4-9621-de42e2cbf9e8" />
+<img width="480" height="300" alt="スクリーンショット 2026-05-31 222026" src="https://github.com/user-attachments/assets/a24a5600-a78a-4684-9be4-282520685c95" />
 
 **この画面で論理式の入力と回路図の生成を行います。**
 
 ### 使い方
-<img width="445.7" height="394.6" alt="スクリーンショット 2026-05-03 115639" src="https://github.com/user-attachments/assets/05bcb1cf-8b47-40f4-87b1-c824d7bd0525" />
+<img width="479.75" height="277.75" alt="image" src="https://github.com/user-attachments/assets/8386e98c-af4c-4255-9639-392875d56522" />
+
 
 **このアプリケーションの使い方を簡潔に説明しています。**
 
@@ -54,31 +57,16 @@
 - **2.** 不正な入力に対しエラーを即座に表示し、ユーザーの入力をサポートします。
 - **3.** 生成した回路図をPNG画像としてダウンロードできます。
 
-## 開発背景
-
-- **背景**：学校でレポートを作る際、論理回路図を載せる機会が何度かあった。そのたびに描画ソフトで回路を<br>
-  作る作業があり、レポート作成にかかる時間が他のレポートよりも長くなってしまっていた。
-- **目的**：論理式を入力するだけで論理回路を生成し、画像として保存でき、レポート作成をスムーズにするツールの開発。
 
 ## 使用技術
-### Frontend
-- React: リアルタイムのUI更新を実現できるため採用
-- JavaScript: 構文解析、回路の描画・配置処理の実装
+### フレームワーク / ビルドツール
+- React: v19.2.4
+- Vite(build.minify terser v5.48.0): v8.0.4
 
-### Library / API
-- Mathlive / KaTeX: 数式入力の効率化、視認性の向上のため採用
-- Canvas API: 自由度が高く、高速な描画が可能なため採用 
-
-## こだわった点
-### 1. [技術的な工夫]
-ユーザーにリアルタイムでサービスを提供できるように、クライアントサイドに処理を集約させ高速化を行いました。
-また、論理式の構造を崩さず正確に構文解析を行うため、入力された文字列をShunting-yard法を論理式用に改良したアルゴリズムで逆ポーランド記法に加工しました。
-これによりスタックを利用しデータを取り出すことで、回路素子単位での管理が可能になりました。
-
-### 2. [ユーザー視点の工夫]
-入力した論理式の視認性を高めるため、Mathliveを利用しLaTeX形式で入力を表示しました。
-また、Mathliveのキーボード入力補完機能や、画面上の仮想キーボードの機能を有効活用し、
-記号を多用するキーボード入力に慣れている人も、慣れていない人も直感的に操作できるインターフェースを実現しました。
+### ライブラリ / API
+- MathLive: v0.109.1
+- KaTeX: v0.16.47
+- canvas API
 
 ## 今後の展望
 - [ ] 複数出力がある論理回路にも対応できる処理の実装
