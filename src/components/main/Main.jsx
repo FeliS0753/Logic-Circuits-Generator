@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import './canvas.css';
+import 'mathlive';
+import 'mathlive/static.css';
 import { draw } from '/src/programs/draw.js';
 import Attentions from './attentions/attentions.jsx';
 import Math_field from './mathfield/mathfield.jsx';

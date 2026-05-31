@@ -1,5 +1,3 @@
-import 'mathlive';
-import 'mathlive/static.css';
 import {useEffect, useState, useRef} from "react";
 import {toRpn, TeXtostr, locate} from "./index";
 import "./mathfield.css";
