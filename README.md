@@ -36,18 +36,18 @@
 ## サイトイメージ
 
 ### メイン画面
-<img width="480" height="300" alt="スクリーンショット 2026-05-31 222026" src="https://github.com/user-attachments/assets/a24a5600-a78a-4684-9be4-282520685c95" />
+<img width="720" height="450" alt="スクリーンショット 2026-05-31 222026" src="https://github.com/user-attachments/assets/a24a5600-a78a-4684-9be4-282520685c95" />
 
 **この画面で論理式の入力と回路図の生成を行います。**
 
 ### 使い方
-<img width="479.75" height="277.75" alt="image" src="https://github.com/user-attachments/assets/8386e98c-af4c-4255-9639-392875d56522" />
+<img width="719.625" height="416.625" alt="image" src="https://github.com/user-attachments/assets/8386e98c-af4c-4255-9639-392875d56522" />
 
 
 **このアプリケーションの使い方を簡潔に説明しています。**
 
 ### サンプル
-<img width="443.9" height="366.5" alt="スクリーンショット 2026-05-03 120033" src="https://github.com/user-attachments/assets/1e1964fe-ef27-4d73-8b57-3038430e035e" />
+<img width="710.24" height="586.4" alt="スクリーンショット 2026-05-03 120033" src="https://github.com/user-attachments/assets/1e1964fe-ef27-4d73-8b57-3038430e035e" />
 
 **出力例のサンプルをいくつか載せています.**
 
@@ -60,13 +60,13 @@
 
 ## 使用技術
 ### フレームワーク / ビルドツール
-- React: v19.2.4
-- Vite(build.minify terser v5.48.0): v8.0.4
+- **React:** v19.2.4
+- **Vite(build.minify terser v5.48.0):** v8.0.4
 
 ### ライブラリ / API
-- MathLive: v0.109.1
-- KaTeX: v0.16.47
-- canvas API
+- **MathLive:** v0.109.1
+- **KaTeX:** v0.16.47
+- **canvas API**
 
 ## 今後の展望
 - [ ] 複数出力がある論理回路にも対応できる処理の実装
