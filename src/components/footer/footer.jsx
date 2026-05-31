@@ -4,7 +4,7 @@ export default function Footer(){
     return (
         <footer className="tool-footer">
             <div className="footer-left">
-                <span>v1.0.0</span>
+                <span>v1.0.2</span>
             </div>
             <div className="footer-right">
                 <span>2026.5</span>

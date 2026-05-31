@@ -15,7 +15,7 @@ export default function How_to_use(){
                         <li>論理式に対応した<InlineMath math={str[0]}/>の数式入力(下表参照)を、入力欄にペーストする。</li>
                     </ul>
                 </li>
-                <li>Enterを押すと論理回路図が生成されます。</li>
+                <li>Enterまたは"生成"を押すと論理回路図が生成されます。</li>
                 <li>"PNGでダウンロード" を押すと、PNG画像として回路図をダウンロードできます。</li>
             </ol>
             演算子の優先度、<InlineMath math={str[0]}/>との対応は以下の通りです。「式」には論理式を入れてください。
