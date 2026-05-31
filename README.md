@@ -1,7 +1,7 @@
 # Logic-Circuits-Generator
 論理式から論理回路図を生成をするWebアプリケーションです。
 
-モバイルアクセスはサポートしておりません。
+モバイルアクセスでも動作はしますがサポートはしておりません。
 
 [デモはこちら](https://logic-circuits-generator.vercel.app/)
 
